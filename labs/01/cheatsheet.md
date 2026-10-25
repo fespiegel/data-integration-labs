@@ -349,7 +349,7 @@ A marker like `[^note]` in the text and a line `[^note]: ...` define a footnote.
 ````markdown
 Markdown was created in 2004.[^note]
 
-[^note]: By John Gruber, with Aaron Swartz.
+[^note]: By Finn Spiegel, 25.10.2026.
 ````
 
 Markdown was created in 2004.[^note]
