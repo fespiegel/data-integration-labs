@@ -15,7 +15,6 @@ My lab solutions for the course DIS3.3 Data Integration (winter term 2026/27, TH
 | 01 | Open source, open data and Markdown | [labs/01/](labs/01/) |
 
 ## Licence
-
-The code and text in this repository are released under the [MIT License](LICENSE).
-Data from other sources is not covered by it: it keeps its own licence, which is
-named wherever the data is used.
+- The code in this repository is released under the [MIT License](https://github.com/fespiegel/data-integration-labs/blob/main/LICENSE).
+- The texts (documentation, cheatsheets) are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- Data from other sources is not covered by these licences: it keeps its own licence, which is named wherever the data is used.
