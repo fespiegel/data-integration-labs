@@ -354,7 +354,7 @@ Markdown was created in 2004.[^note]
 
 Markdown was created in 2004.[^note]
 
-[^note]: By John Gruber, with Aaron Swartz.
+[^note]: By Finn Spiegel, 25.10.2026.
 
 ### Emoji shortcodes (GitHub)
 
