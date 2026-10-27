@@ -409,7 +409,7 @@ $$\int_0^1 x^2 \, dx = \frac{1}{3}$$
 ## Pitfalls
 
 1. **My demo headings became real headings.** I wrote `# Level 1 heading` outside a code block, and it appeared in the page outline. Fix: show headings of levels 4 to 6 only, and keep the level 1 to 3 examples inside code blocks.
-2. **My line break disappeared.** Two lines directly below each other ran together into one. Fix: end the line with a backslash, two spaces or `<br>`, or leave a blank line for a new paragraph.
-3. **Showing the source of a code block broke the page.** The three backticks inside the example closed my outer block too early. Fix: use four backticks around the outside.
+2. **Showing the source of a code block broke the page.** The three backticks inside the example closed my outer block too early. Fix: use four backticks around the outside.
 4. **My mentions and issue references did not become links.** In a `.md` file, `@octocat` and `#1` stay plain text. Fix: write them in an issue or comment, or use a normal link.
 5. **A `|` in a table cell split the cell.** Fix: escape it as `\|`.
+6. **A `` ` `` alone wasn't visible*** When i wrote ````` it didnt point it out alone. Fix: A space infront and behind the `` ` `` needs to be writen
