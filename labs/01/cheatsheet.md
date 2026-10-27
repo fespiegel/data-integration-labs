@@ -374,7 +374,7 @@ A name between two colons turns into an emoji.
 Thanks @octocat, see #1.
 ````
 
-Thanks @octocat, see #1.
+Thanks @fespiegel, see #1.
 
 ### Mermaid diagram (GitHub)
 
