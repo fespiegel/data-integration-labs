@@ -15,4 +15,14 @@ If you copy code from the project into your own, you must:
 2. **My lab repo (fespiegel/data-integration-labs)**: The spdx_id is MIT, which tells a machine that my repo uses the permissive MIT License, so others may freely reuse and modify the code as long as they keep the copyright and license notice.
 3. **owid/co2-data**: The license field is null, which means GitHub found no recognizable license file, so a machine reading the API sees no declared license and cannot tell whether reuse is permitted.
 
+### 3. Community files
 
+| File | Present? | Notes |
+|------|----------|-------|
+| `README` | ✅ Yes | Explains what the project is and how to use it |
+| `LICENSE` | ✅ Yes | BSD-3-Clause, detected by GitHub |
+| `CONTRIBUTING` | ✅ Yes | Describes how to help (issues, pull requests) |
+| `CODE_OF_CONDUCT` | ✅ Yes | Contributor Covenant |
+
+All four files are present, as shown under **Insights → Community standards**.
+The repository also has a `SECURITY` file.
