@@ -26,3 +26,64 @@ If you copy code from the project into your own, you must:
 
 All four files are present, as shown under **Insights → Community standards**.
 The repository also has a `SECURITY` file.
+
+### 4. People
+
+- **Contributors:** 3,889, as shown in the Contributors box on the repository
+  page. Most of the work is done by a small core group; a lot of people
+  contributed once (see Insights → Contributors for the distribution).
+- **Who decides what gets merged:** the pandas **Core Team**. Only core team
+  members can merge pull requests. Anyone can review, but merging needs a core
+  member. The project works by consensus: no merging with an open objection,
+  and larger changes should have approval from at least two core members.
+  New core members are nominated and voted in by the existing Core Team after
+  at least a year of sustained contributions.
+- **Sources:** pandas governance page (pandas.pydata.org/about/governance.html)
+  and the "pandas maintenance" guide in the contributor docs.
+
+### 5. Money
+
+- **Foundation:** pandas is a sponsored project of
+  [NumFOCUS](https://numfocus.org), which acts as fiscal host on Open Collective
+  and holds the money.
+- **Donations and sponsors:** the repo's Sponsor link goes to
+  [opencollective.com/pandas](https://opencollective.com/pandas), with backer
+  ($5/month), sponsor ($100/month) and one-time donation options. The finances
+  are public: about $310,900 raised in total, about $204,100 paid out, balance
+  about $106,800 (as of 3 Nov 2026).
+- **Grants:** Chan Zuckerberg Initiative grants appear as projects on the
+  [Open Collective page](https://opencollective.com/pandas/projects).
+- **Companies:** the [sponsors page](https://pandas.pydata.org/about/sponsors.html)
+  lists sponsors (e.g. Tidelift, Bodo) and institutional partners that employ
+  contributors (e.g. Nvidia).
+- **Paid work:** the [expense list](https://opencollective.com/pandas/expenses)
+  shows payments to contributors, e.g. a $9,450 "PR Review" payment in
+  September 2026.
+- **Volunteers:** most of the 3,889 contributors are probably volunteers.
+
+**Sources:** [Open Collective](https://opencollective.com/pandas) ·
+[Sponsors page](https://pandas.pydata.org/about/sponsors.html) ·
+[Governance](https://pandas.pydata.org/about/governance.html)
+
+### 6. Activity
+
+- **Latest release:** [pandas 3.1.0](https://github.com/pandas-dev/pandas/releases/tag/v3.1.0),
+  released on 22 October 2026. The project has 125 releases in total, and
+  512 commits have landed on `main` since this one.
+- **Open issues:** about 1.7k ([issues](https://github.com/pandas-dev/pandas/issues))
+- **Open pull requests:** 295 ([pull requests](https://github.com/pandas-dev/pandas/pulls))
+- *Checked on 3 Nov 2026.*
+
+The project is very active: regular releases, hundreds of open pull requests
+and a steady stream of commits.
+
+### 7. Your way in
+
+- **How a change gets in:** the [contributing guide](https://pandas.pydata.org/docs/dev/development/contributing.html)
+  describes a fork-and-pull-request workflow: pick an issue and assign yourself,
+  fork the repository, create a feature branch, make the change, open a pull
+  request, address review comments, and a core team member merges it.
+- **Newcomer label:** yes. The guide recommends issues labelled
+  **good first issue** and **Docs**. Maintainers apply the label to
+  well-defined, straightforward issues.
+- **Number of open good first issues:** [read from Issues → Labels on [date]]
