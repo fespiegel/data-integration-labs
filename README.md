@@ -12,7 +12,8 @@ My lab solutions for the course DIS3.3 Data Integration (winter term 2026/27, TH
 
 | Lab | Topic | Folder |
 |-----|-------|--------|
-| 01 | Open source, open data and Markdown | [labs/01/](labs/01/) |
+| 01 | Open Source Software and Open Data | [labs/01/](labs/01/) |
+| 02 | Command Line Interface | [labs/02/](labs/01)|
 
 ## Licence
 - The code in this repository is released under the [MIT License](https://github.com/fespiegel/data-integration-labs/blob/main/LICENSE).
