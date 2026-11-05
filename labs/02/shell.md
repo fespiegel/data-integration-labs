@@ -120,4 +120,29 @@ Locations of the programs (found with `which`):
 
 ### 5. How full is your disk?
 
+Command
 
+```bash
+$ df -h
+```
+
+Output
+
+```bash
+Filesystem            Size  Used Avail Use% Mounted on
+C:/Program Files/Git  457G  358G  100G  79% /
+```
+
+Command
+
+```bash
+$ du -sh ~/Downloads
+```
+
+Output
+
+```bash
+22G     /c/Users/finns/Downloads
+```
+
+Answer: The disk is 79% full: 358 GB of 457 GB are used and 100 GB are still free. The Downloads folder (`/c/Users/finns/Downloads`) takes up 22 GB, which is about 5% of the whole disk.
