@@ -4,7 +4,7 @@ My lab solutions for the course DIS3.3 Data Integration (winter term 2026/27, TH
 
 ## About
 
-- **Author:** Finn Spiegel ([Finn Spiegel/data-integration-labs](https://github.com/fespiegel))
+- **Author:** Finn Spiegel | [Finn Spiegel/data-integration-labs](https://github.com/fespiegel)
 - **Course repository:** [breuert/data-integration](https://github.com/breuert/data-integration)
 - **Team project:** [Cinema-beyond-Hollywood](https://github.com/fespiegel/DIS-3.3-Data-Integration)
 
