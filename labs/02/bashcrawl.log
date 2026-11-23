@@ -1,0 +1,474 @@
+  248  cd bashcrawl-master/entrance
+  249  cat scroll
+  250  cd cellar
+  251  cat scroll
+  252  ./treasure
+  253  export I=amulet,$I
+  254  cd armoury
+  255  cat scroll
+  256  ./potion          # answer: y
+  257  ./treasure
+  258  export I=sword,$I
+  259  cd chamber
+  260  ./spell           # answer: y
+  261  ./statue          # answer: y, then y
+  262  ./treasure
+  263  export I=diamonds,$I
+  264  cd portal
+  265  ./monster         # answer: y, then a number
+  266  ls -l
+  267  ./treasure
+  268  export I=crown,$I
+  269  cd ~/labs/02/bashcrawl-master/entrance/chapel
+  270  cat scroll
+  271  ./altar           # answer: y
+  272  export I=rags,fish,$I
+  273  cd aviary
+  274  cat scroll
+  275  ./penguin         # fish question: answer with just y or n
+  276  ./crystal
+  277  pwd
+  278  pwd
+  279  ls
+  280  cd bashcrawl-master/
+  281  pwd
+  282  ls
+  283  cd entrance
+  284  ls
+  285  cat scroll
+  286  cd cellar
+  287  ls
+  288  cat scroll
+  289  alias ls='ls -F'
+  290  ./treasure
+  291  export I=amulet,$I
+  292  echo $I
+  293  cd armoury/
+  294  ls
+  295  ./potion 
+  296  export HP=15
+  297  echo $HP
+  298  cat scroll
+  299  cd ..
+  300  ./treasure
+  301  ls
+  302  cd armoury/
+  303  LS
+  304  ./treasure
+  305  export I=sword,$I
+  306  echo $I
+  307  ls
+  308  ./chamber
+  309  cd chamber/
+  310  ls
+  311  cat scroll#
+  312  cat scroll
+  313  pwd
+  314  ls
+  315  ./spell
+  316  ln -fs ../../../chapel/courtyard/aviary/hall portal
+  317  ls
+  318  ./statue
+  319  let "HP=HP-5"
+  320  ls
+  321  ./treasure 
+  322  export I=diamonds,$I
+  323  echo §I
+  324  echo $I
+  325  ls
+  326  cat pieces
+  327  ./statue
+  328  ./statue
+  329  ls
+  330  pwd
+  331  cd portal
+  332  ls
+  333  ./monster 
+  334  let HP=HP-5
+  335  ls
+  336  ./carcass 
+  337  ./treasure 
+  338   export I=crown,$I
+  339  echo $I
+  340  ls
+  341  cd library/
+  342  ls
+  343  cat scroll
+  344  ls
+  345  ./tome 
+  346  ls
+  347  cat scroll
+  348  ./tome
+  349  cd ../..
+  350  ls
+  351  echo $I
+  352  cd protal
+  353  ls
+  354  ./protal
+  355  cd portal
+  356  ls
+  357  tree -F ..
+  358  tree -F
+  359  tree -F ..
+  360  cd ~/bashcrawl-master/entrance
+  361  find . | sort
+  362  pwd
+  363  ls
+  364  cat scrap
+  365  cat scroll
+  366  ./vault
+  367  ./vault/
+  368  cd chapel
+  369  ls -aF
+  370  ./altar
+  371  echo $I
+  372  ./altar 
+  373  ./altar
+  374  export I=trinket,$I
+  375  echo $I
+  376  ls
+  377  cat scroll
+  378  cat scroll
+  379  ls
+  380  cd courtyard
+  381  ls
+  382  ./fountain 
+  383  let "HP=HP-2"
+  384  echo $HP
+  385  ./rags
+  386  export I=rags,fish,$I
+  387  echo $I
+  388  ls
+  389  cat scroll
+  390  cd aviary/
+  391  ls
+  392  cat scroll
+  393  ./penguin 
+  394  export I=$(sed "s/fish//; s/,,/,/" <<< $I)
+  395  echo $I
+  396  ls
+  397  ./crystal 
+  398  I=crystal,$I
+  399  echo $I
+  400  ls
+  401  cd hall/
+  402  ls
+  403  ./monster 
+  404  pwd
+  405  echo $HP
+  406  ls
+  407  ./corpse.DPM 
+  408  echo $I
+  409  ls
+  410  ./monster
+  411  pwd
+  412  ls
+  413  ./corpse.DPM
+  414  ./corpse.fMz
+  415  ls
+  416  ./monster 
+  417  ls
+  418  ./carcass 
+  419  ls
+  420  ./treasure 
+  421  cd library/
+  422  ls
+  423  cd ../..
+  424  ls
+  425  cd ..
+  426  ls
+  427  cd ..
+  428  ls
+  429  cd graveyard/
+  430  ls
+  431  ./padlock 
+  432  cat scroll 
+  433  cd columbarium/
+  434  ls
+  435  cat scroll 
+  436  ./ open 
+  437  ./open
+  438  cd niches 
+  439  ./niches
+  440  ls
+  441  cat niches 
+  442  ./open
+  443  cat open
+  444  ls
+  445  export I=2712,\$I
+  446  echo $I
+  447  ls
+  448  ./open
+  449  cat scroll
+  450  touch 2712
+  451  ls
+  452  cat 2712
+  453  [200~touch 15
+  454  touc´h 15
+  455  touch 15
+  456  ./open
+  457  rm 2712
+  458  export I=crystal,rags,trinket,crown,diamonds,sword,amulet,
+  459  export I=2712,$I
+  460  echo $I
+  461  ls
+  462  cat niches
+  463  cat scroll
+  464  cd ..
+  465  ls
+  466  cat scroll 
+  467  ls
+  468  cd columbarium/
+  469  ls
+  470  cat 15
+  471  cat niches
+  472  cd ..
+  473  ls
+  474  cd lower-quadrant/
+  475  ls
+  476  cat gravestones 
+  477  cat scroll 
+  478  sort gravestones 
+  479  cd ..
+  480  ls
+  481  cd royal-tombs/
+  482  ls
+  483  cat scroll 
+  484  cat royals 
+  485  ls
+  486  cat sign
+  487  grep King royals
+  488  ./statues
+  489  export I=$(sed 's/crown,//' <<< $I)
+  490  export I=7432,$I
+  491  echo $I
+  492  ls
+  493  ./king
+  494  ls
+  495  cat sign
+  496  grep King royals
+  497  ..cd
+  498  cd ..
+  499  ls
+  500  ./padlock 
+  501  echo $I
+  502  ls
+  503  cd lower-quadrant/
+  504  ls
+  505  cat gravestones 
+  506  cat scroll 
+  507  sort gravestones 
+  508   export I=<1840>,$I
+  509  export I=1889,$I
+  510  echo $I
+  511  cd..
+  512  ls
+  513  cd ..
+  514  ls
+  515  ./padlock 
+  516  echo §I
+  517  echo $I
+  518  export I=$(sed 's/1889,//' <<< $I)
+  519  export I=1765,$I
+  520  echo $I
+  521  ./padlock
+  522  ls
+  523  ./mausoleum/
+  524  cd mausoleum/
+  525  ls
+  526  ./loot 
+  527  ls
+  528  ./corpse.90j 
+  529  echo $I
+  530  cat scroll
+  531  cat room
+  532  cat spell
+  533  [200~sort room | uniq
+  534  sort room | uniq
+  535  ls
+  536  ./loot
+  537  export I=goldcoins,bracelet,silverkeys,$I,
+  538  ls
+  539  echo $I
+  540  cd ..
+  541  ls
+  542  cd ~/bashcrawl-master/entrance/vault
+  543  ls -aF
+  544  cat scroll
+  545  ls
+  546  ./glass 
+  547  export I=$(sed 's/crystal,//' <<< $I)
+  548  echo $I
+  549  ls
+  550  cd stronghold
+  551  ls -aF
+  552  cat scroll
+  553  ls
+  554  ./goblet 
+  555  cat orb1
+  556  ls
+  557  cp orb1 orb2
+  558  cp orb1 orb3
+  559  ls
+  560  ./goblet 
+  561  export goblet=I, $I
+  562  export I=goblet,$I
+  563  echo $I
+  564  ls
+  565  orb1
+  566  cat orb1
+  567  ./nursery/
+  568  cd nursery/
+  569  ls
+  570  cat scroll 
+  571  ./spell
+  572  ls
+  573  find . -name "potion"
+  574  ls
+  575  cd kab
+  576  cd lab
+  577  ls
+  578  cat scroll 
+  579  ./ghost 
+  580  ls
+  581  ./platinum 
+  582  export I=platinum,$I
+  583  cat scroll 
+  584  ./treasure 
+  585  export I=emerald,$I
+  586  echo $I
+  587  ls
+  588  cd ~/bashcrawl-master/entrance
+  589  find . -name "potion"
+  590  ls
+  591  cd cellar/
+  592  cd armoury/
+  593  cd potion 
+  594  ./potion 
+  595  cp potion ~/bashcrawl-master/entrance/vault/stronghold/nursery/
+  596  cd ~/bashcrawl-master/entrance/vault/stronghold/nursery
+  597  ls
+  598  ./spell
+  599  let HP=HP+5
+  600  ls
+  601  ./potion 
+  602  echo $HP
+  603  cd lab
+  604  cat scroll
+  605  ls
+  606  ./ghost 
+  607  ls
+  608  ./treasure 
+  609  echo $I
+  610  pwd
+  611  ls -aF
+  612  ln -s ../../../../.rift portal
+  613  ls -aF
+  614  cd portal
+  615  ls -aF
+  616  cat scroll
+  617  echo $I
+  618  echo $HP
+  619  ./box
+  620  cd spire
+  621  ls -aF
+  622  cat scroll
+  623  cd mezzanine
+  624  ls -aF
+  625  cat scroll
+  626  cat window
+  627  ./button
+  628  ls
+  629  ls -aF
+  630  ./door/
+  631  cd door/
+  632  ls -aF
+  633  cat scroll
+  634  cat display 
+  635  ls
+  636  ./display 
+  637  ls -aF
+  638  cat scroll
+  639  grep -v '^$' display
+  640  cat .direction
+  641  pwd
+  642  ./display
+  643  ls
+  644  cat .direction
+  645  ./display
+  646  cd door
+  647  ls
+  648  cat notebook
+  649  cat alpha gamma beta delta | base64 -d > robot
+  650  sha256sum -c sha256sums
+  651  for a in alpha beta gamma delta; do  for b in alpha beta gamma delta; do   for c in alpha beta gamma delta; do    for d in alpha beta gamma delta; do     [ $(printf '%s\n' $a $b $c $d | sort -u | wc -l) -eq 4 ] || continue;     cat $a $b $c $d | base64 -d > robot 2>/dev/null;     if sha256sum -c sha256sums >/dev/null 2>&1; then echo "OK: $a $b $c $d"; fi;    done;   done;  done; done
+  652  cat delta beta alpha gamma | base64 -d > robot
+  653  sha256sum -c sha256sums
+  654  chmod +x robot
+  655  ls -lF
+  656  file robot
+  657  sha256sum -c sha256sums
+  658  grep -v '^$' robot
+  659  ./robot
+  660  let HP=HP-5
+  661  echo $HP
+  662  ls -aF
+  663  cat spell
+  664  ls -aF
+  665  cat spell
+  666  cat notebook
+  667  grep -v '^$' button
+  668  ./button
+  669  ls
+  670  ls -F
+  671  ls -aF
+  672  cd door
+  673  cat .direction 
+  674  ./display
+  675  cd door
+  676  pwd
+  677  ls
+  678  cd ~/bashcrawl-master/entrance/vault/stronghold/nursery/lab/portal
+  679  ls -aF
+  680  grep -v '^$' ~/bashcrawl-master/entrance/vault/stronghold/nursery/spell
+  681  ./spell
+  682  cd ~/bashcrawl-master/entrance/vault/stronghold/nursery/lab/portal/arena
+  683  ls -aF
+  684  cat scroll
+  685  grep -v '^$' ~/bashcrawl-master/entrance/vault/stronghold/nursery/spell
+  686  ./spell
+  687  ./spell
+  688  ls
+  689  cat scroll
+  690  cp ~/bashcrawl-master/entrance/cellar/armoury/potion ~/bashcrawl-master/entrance/vault/stronghold/nursery/
+  691  cd ~/bashcrawl-master/entrance/vault/stronghold/nursery
+  692  ./spell
+  693  let HP=HP+5
+  694  ls
+  695  cd ~/bashcrawl-master/entrance/vault/stronghold/nursery/lab/portal/arena/pit
+  696  ls -aF
+  697  cat scroll
+  698  cd ~/bashcrawl-master/entrance/vault/stronghold/nursery/lab/portal/arena/pit
+  699  ls -aF
+  700  cat scroll
+  701  cat drum
+  702  ./drummer
+  703  echo $HP
+  704  mv drum ..
+  705  ls -aF
+  706  ./drummer
+  707  ./nyarlathotep 
+  708  ls
+  709  ./corpse.zaL 
+  710  echo $I
+  711  ls
+  712  ./nyarlathotep 
+  713  ls
+  714  ./platinum 
+  715  cat scroll 
+  716  ./treasure 
+  717  export I=lock,$I
+  718  echo $I
+  719  cat end
+  720  cd ~
+  721  history > labs/02/history.txt
