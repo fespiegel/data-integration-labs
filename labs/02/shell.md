@@ -150,3 +150,29 @@ Answer: The disk is 79% full: 358 GB of 457 GB are used and 100 GB are still fre
 # Task 2 · Play bashcrawl
 
 ## bashcrawl
+
+**Inventar am Ende des Spiels (`echo $I`):**
+
+```
+lock,emerald,platinum,goblet,goldcoins,bracelet,silverkeys,1765,7432,2712,rags,trinket,diamonds,sword,amulet,,
+```
+
+**Drei Befehle, die nicht in der Vorlesung vorkamen:**
+
+- `export I=sword,$I`: setzt eine Variable und macht sie für Programme sichtbar, die ich starte. So führte ich mein Inventar.
+- `let HP=HP-5`: rechnet mit Variablen, hier zog ich Lebenspunkte ab.
+- `ln -s`: legt einen Link auf eine Datei oder einen Ordner an, so baute ich das Portal (unter Git Bash entsteht dabei eine Kopie statt eines Links).
+
+**`ls -l` in einem Raum mit einem Monster (`lab/`, Monster: `ghost`):**
+
+```
+-rwxr-xr-x 1 finns 197609 3234 May 24  2026 ghost*
+-rwxr-xr-x 1 finns 197609  239 Nov 23 13:17 platinum*
+drwxr-xr-x 1 finns 197609    0 Nov 23 13:18 portal/
+-rw-r--r-- 1 finns 197609  352 May 24  2026 scroll
+-rwxr-xr-x 1 finns 197609  218 Nov 23 13:17 treasure*
+```
+
+Ein Monster (`ghost`) ist ein Skript mit Ausführungsrecht: In `-rwxr-xr-x` steht ein `x`, deshalb kann ich es mit `./ghost` starten, und `ls -F` markiert es mit `*`. Ein Scroll (`scroll`) ist reiner Text ohne `x` (`-rw-r--r--`). Man kann ihn nur lesen, zum Beispiel mit `cat`, aber nicht starten.
+
+Ich habe das Spiel in `~/bashcrawl-master/` statt in `labs/02/` gespielt. Nach einem versehentlich geschlossenen Terminal habe ich neu begonnen. Nach einem GAME OVER habe ich mein Inventar mit `export` aus der Anzeige der Leiche wiederhergestellt.
