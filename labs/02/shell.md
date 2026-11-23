@@ -146,3 +146,7 @@ Output
 ```
 
 Answer: The disk is 79% full: 358 GB of 457 GB are used and 100 GB are still free. The Downloads folder (`/c/Users/finns/Downloads`) takes up 22 GB, which is about 5% of the whole disk.
+
+# Task 2 · Play bashcrawl
+
+## bashcrawl
