@@ -89,3 +89,21 @@ wc -l *.tsv
 
 **Answer:** `wc -l` counts lines, and the first line of each file is the header, not an article. So the files contain 13,711 (africa), 27,391 (america), 507,731 (2014-01_JA) and 5,374 (britain) articles.
 
+## 2. Missing values
+
+```bash
+cut -f 11 2014-01_JA.tsv |  # take column 11 (Language) from every line
+  sort |                    # sort alphabetically so identical values are neighbours
+  uniq -c |                 # merge identical neighbours and put the count in front
+  sort -nr                  # sort by that count, largest first
+```
+
+```text
+ 403284 eng
+  40155 fre
+  36100
+  28192 ger
+      1 Language
+```
+
+**Answer:** 36,100 articles have no language (the line with a count and no value). The languages are English (403,284), French (40,155) and German (28,192). The line "Language" with count 1 is the header, not an article.
