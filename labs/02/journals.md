@@ -73,5 +73,19 @@ diff header_jan.txt header_britain.txt
 
 **Answer:** Yes, all four files have the same header. `diff` prints nothing when two files are equal, so the three other headers are identical to the one in `2014-01_JA.tsv`.
 
+### 1d. How many articles does each file contain?
 
+```bash
+wc -l *.tsv
+```
+
+```text
+   13712 2014-01-31_JA-africa.tsv
+   27392 2014-01-31_JA-america.tsv
+  507732 2014-01_JA.tsv
+    5375 2014-02-02_JA-britain.tsv
+  554211 total
+```
+
+**Answer:** `wc -l` counts lines, and the first line of each file is the header, not an article. So the files contain 13,711 (africa), 27,391 (america), 507,731 (2014-01_JA) and 5,374 (britain) articles.
 
