@@ -34,6 +34,44 @@ No extra command needed, the answer is in the output of 1a.
 
 **Answer:** Column 10 is cut off: "Place Labe" (probably "Place Label").
 
+### 1c. Do all four TSV files have the same header?
+
+```bash
+head -n 1 *.tsv
+```
+
+```text
+==> 2014-01-31_JA-africa.tsv <==
+File	Creator	Issue	Volume	Journal	ISSN	ID	Citation	Title	Place Labe	Language	Publisher	Date
+
+==> 2014-01-31_JA-america.tsv <==
+File	Creator	Issue	Volume	Journal	ISSN	ID	Citation	Title	Place Labe	Language	Publisher	Date
+
+==> 2014-01_JA.tsv <==
+File	Creator	Issue	Volume	Journal	ISSN	ID	Citation	Title	Place Labe	Language	Publisher	Date
+
+==> 2014-02-02_JA-britain.tsv <==
+File	Creator	Issue	Volume	Journal	ISSN	ID	Citation	Title	Place Labe	Language	Publisher	Date
+```
+
+To check it exactly, I saved the header line of each file and compared the files with `diff`:
+
+```bash
+head -n 1 2014-01_JA.tsv > header_jan.txt
+head -n 1 2014-01-31_JA-africa.tsv > header_africa.txt
+head -n 1 2014-01-31_JA-america.tsv > header_america.txt
+head -n 1 2014-02-02_JA-britain.tsv > header_britain.txt
+
+diff header_jan.txt header_africa.txt
+diff header_jan.txt header_america.txt
+diff header_jan.txt header_britain.txt
+```
+
+```text
+(no output)
+```
+
+**Answer:** Yes, all four files have the same header. `diff` prints nothing when two files are equal, so the three other headers are identical to the one in `2014-01_JA.tsv`.
 
 
 
