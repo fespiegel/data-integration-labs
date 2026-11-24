@@ -51,3 +51,20 @@ I used Claude whenever I got stuck. I did not log every prompt, so these are rep
 * Output: `grep -n` and `tail -n +N` for the log, a draft of the `bashcrawl` section.
 * Accepted / changed / rejected: The example line number `123` was wrong for my history (the log started mid-game), so I redid it with line 27. I chose three commands for `shell.md` that were not in the lecture (`export`, `let`, `ln -s`) after checking the lecture slides. I did not use a replay script Claude suggested. Lines 248 to 276 of the log come from an aborted attempt where I pasted several lines at once.
 * How I checked it: `head` and `tail` of `bashcrawl.log`, and I opened both files on GitHub to confirm they are in `labs/02`.
+
+## 2026-11-24 · Lab 2, Task 3, Question 1c (same header in all four TSV files?)
+
+**Tool and model:** Claude (Claude Sonnet 5.5), claude.ai
+
+**My own attempt first:** I wanted to compare the header lines of the four `.tsv` files. My idea was to look at the first line of every file with `head -n 1 *.tsv` and compare by eye.
+
+**Prompt 1:** I asked whether `head -n 1 *.tsv` was the right idea for question 1c.
+- Claude's answer: The command is correct and shows four identical-looking headers, but comparing by eye can miss small differences.
+- What I did with it: I kept `head -n 1 *.tsv` and used its output as the first part of my answer.
+
+**Prompt 2:** I then tried `head -n 1 | diff 2014-01-31_JA-africa.tsv 2014-01-31_JA-america.tsv` and it did not work, so I asked for help.
+- Claude's answer: `diff` with two file names only reads those two files and ignores what comes through the pipe, so it would compare the whole files, not just the headers. It suggested saving each header line into its own new file with `head -n 1 ... > file` and comparing those files with `diff` (the approach from the hint "checking a claim").
+- What I accepted: Saving the header of each file with `>` and comparing with `diff`. I compared `2014-01_JA.tsv` with the other three files.
+- What I rejected or changed: I did not use `md5sum` or `diff <(...)`, because they are not in the course material. I also ran an earlier version with differently named helper files (`h_*.txt`) first.
+
+**How I checked it:** `diff` printed nothing for all three comparisons, which according to the hint means the files are equal. This matches what I saw with `head -n 1 *.tsv`. I deleted the helper files afterwards.
