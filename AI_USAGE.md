@@ -68,3 +68,16 @@ I used Claude whenever I got stuck. I did not log every prompt, so these are rep
 - What I rejected or changed: I did not use `md5sum` or `diff <(...)`, because they are not in the course material. I also ran an earlier version with differently named helper files (`h_*.txt`) first.
 
 **How I checked it:** `diff` printed nothing for all three comparisons, which according to the hint means the files are equal. This matches what I saw with `head -n 1 *.tsv`. I deleted the helper files afterwards.
+
+## 2026-11-26 · Lab 2, Task 3, Question 3 (years)
+
+**Tool and model:** Claude (Claude Sonnet 5.5), claude.ai
+
+**My own attempt first:** I looked at the date format, counted the articles per year and found the year 2077 myself. My idea was to use `grep` to find the journal of the wrong year, and I tried `cut -f 13 | sort | uniq -c | grep "2077$"`.
+
+**Prompt:** I asked whether my `grep` idea was right and how to find the journal.
+- Claude's answer: The idea was right, but my command had already cut away the journal. Cut Journal and Date together, then search: `cut -f 5,13 2014-01_JA.tsv | grep "2077$" | sort | uniq -c`. Then search for the journal name to see its other years.
+- What I accepted: Both commands. All 20 articles come from FRANCAIS DANS LE MONDE, whose other articles are from 1995 to 2013, so 2007 was probably meant.
+- What I rejected or changed: Claude's first explanation of which digit differs between 2007 and 2077 was wrong. I corrected it: they differ in one digit. I also wrote "2077 lies in the future" instead of relying on the year 2014, which is only Claude's assumption from the file name.
+
+**How I checked it:** I compared the year range of the journal with the possible one-digit changes of 2077.
