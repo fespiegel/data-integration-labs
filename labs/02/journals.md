@@ -107,3 +107,104 @@ cut -f 11 2014-01_JA.tsv |  # take column 11 (Language) from every line
 ```
 
 **Answer:** 36,100 articles have no language (the line with a count and no value). The languages are English (403,284), French (40,155) and German (28,192). The line "Language" with count 1 is the header, not an article.
+
+## 3. Years
+
+### Date format
+
+To see how the date is written, I looked at the first lines of column 13:
+
+```bash
+head -n 10 2014-01_JA.tsv |     # take the first 10 lines
+  cut -f 13                     # keep column 13 (Date)
+```
+
+```text
+Date
+1993
+1993
+1993
+1993
+1994
+1994
+1994
+1994
+1994
+```
+
+**Answer:** The Date column contains only the four-digit year, so nothing has to be cut out. We can count by year directly.
+
+### Which year has the most articles?
+
+```bash
+cut -f 13 2014-01_JA.tsv |      # take column 13 (Date) from every line
+  sort |                        # sort so identical values are neighbours
+  uniq -c |                     # merge identical neighbours and put the count in front
+  sort -nr |                    # sort by that count, largest first
+  head -n 5                     # keep the top five
+```
+
+```text
+  30813 1997
+  28215 1998
+  27968 1996
+  27916 2002
+  27335 2001
+```
+
+**Answer:** The year with the most articles is 1997 (30,813 articles).
+
+### Which year cannot be right?
+
+```bash
+cut -f 13 2014-01_JA.tsv |      # take column 13 (Date) from every line
+  sort |                        # sort by year
+  uniq -c                       # count each year
+```
+
+```text
+  22370
+      1 1987
+      ...
+   8430 2013
+     20 2077
+      1 Date
+```
+
+(In the file the whole list is shown. Here it is shortened with `...`.)
+
+**Answer:** 22,370 articles have no year (missing values). The year 2077 cannot be right, because the data is from 2014. 20 articles have it. The line "Date" with count 1 is the header.
+
+### Which journal do the 2077 articles come from?
+
+```bash
+cut -f 5,13 2014-01_JA.tsv |    # keep Journal and Date
+  grep "2077$" |                # keep lines that end with 2077
+  sort | uniq -c                # count per journal
+```
+
+```text
+     20 FRANCAIS DANS LE MONDE  2077
+```
+
+**Answer:** All 20 articles with the year 2077 come from the journal FRANCAIS DANS LE MONDE.
+
+### Which year was probably meant?
+
+```bash
+cut -f 5,13 2014-01_JA.tsv |
+  grep "FRANCAIS DANS LE MONDE" |
+  sort | uniq -c
+```
+
+```text
+     68 FRANCAIS DANS LE MONDE  1995
+    170 FRANCAIS DANS LE MONDE  1996
+    ...
+     77 FRANCAIS DANS LE MONDE  2013
+     20 FRANCAIS DANS LE MONDE  2077
+```
+
+**Answer:** The other articles of FRANCAIS DANS LE MONDE are from 1995 to 2013, so 2077 is outside the range of the journal and the data (2014). Among the years that differ from 2077 in one digit, only 2007 lies in that range (226 articles). So 2007 was probably meant, most likely a typo.
+
+
